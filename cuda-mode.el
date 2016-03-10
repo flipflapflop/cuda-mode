@@ -16,7 +16,7 @@
 
 ;; including CUBLAS constants 
 (setq cuda-const '("CUBLAS_OP_N" "CUBLAS_OP_T" "CUBLAS_OP_C"
-                   "CUBLAS_FILL_MODE_LOWER" "CUBLAS_FILL_MODE_UPPER" 
+                   "CUBLAS_FILL_MODE_LOWER" "CUBLAS_FILL_MODE_UPPER"
                    "CUBLAS_SIDE_LEFT" "CUBLAS_SIDE_RIGHT"
                    "CUBLAS_POINTER_MODE_HOST" "CUBLAS_POINTER_MODE_DEVICE"))
 
@@ -46,7 +46,7 @@
         (,cuda-keywords-regexp . font-lock-keyword-face)
         (,cuda-builtins-regexp . font-lock-builtin-face)
         (,cuda-func-regexp . font-lock-function-name-face)
-        ("\\<\\(\\sw+\\)[ \t]*\\(<\\{3\\}\\)" 1 font-lock-function-name-face)
+        ("\\<\\(\\sw+\\)[ \t]*\\(<\\{3\\}\\)" (1 font-lock-function-name-face))
         ))
 
 (define-derived-mode cuda-mode c++-mode "CUDA"
