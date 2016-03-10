@@ -46,6 +46,7 @@
         (,cuda-keywords-regexp . font-lock-keyword-face)
         (,cuda-builtins-regexp . font-lock-builtin-face)
         (,cuda-func-regexp . font-lock-function-name-face)
+        ("\\<\\(\\sw+\\)[ \t]*\\(<\\{3\\}\\)" 1 font-lock-function-name-face)
         ))
 
 (define-derived-mode cuda-mode c++-mode "CUDA"
